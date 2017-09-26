@@ -4,37 +4,32 @@ public class prim_tetster {
 
 	public static void main(String[] args) {
 		
-		
-		System.out.println(isPrim(8));
+
+		for(int n = 3; n <=1000; n++){
+			
+			if(isPrime(n))
+			
+			System.out.println(n);
+		}
 		
 	}
-
+		
+	private static boolean isPrime(int n){
+		boolean prime=true;
+		int i = 2;
 	
-
-
-	private static boolean isPrim(int z){
-		
-		boolean prim=false;
-		int i=z;
-		
-		  if (z==1){ 
-		  prim=false;
+		  
+		  if (n == 1) {
+		    prime=false;
 		  }
 		  else{
-			  
-		    while(i<=z-1 && prim==false){
-		    	
-		      if (z%i==0){
-		        prim=false;
-		      }
-		      else{
-		        prim=true;
+		    while (i <= n-1 && prime == true) {
+		      if (n%i==0) {
+		        prime=false;
 		      }
 		      i=i+1;
 		    }
 		  }
-		return prim;
+		 return prime;
 	}
-	
-
 }
